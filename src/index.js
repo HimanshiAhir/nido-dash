@@ -62,19 +62,25 @@ const nidotheme = createTheme({
           fontSize: '18px',
           lineHeight: '1',
           fontWeight: 600,
-          color: theme.palette.primary.contrastText,  // Correct access to theme
+          color: theme.palette.primary.contrastText,
           backgroundColor: theme.palette.secondary.dark,  
           borderWidth: '2px',
           borderStyle: 'solid',
           borderColor: 'transparent',
           padding: '12px 24px',
-          minWidth: '124px',
           transition: '0.3s ease-in-out',
           position: 'relative',
           '&:hover': {
-            backgroundColor: theme.palette.primary.contrastText,  // Correct access to theme
-            color: theme.palette.secondary.dark,  // Correct access to theme
-            borderColor: theme.palette.secondary.dark,  // Correct access to theme
+            backgroundColor: theme.palette.primary.contrastText, 
+            color: theme.palette.secondary.dark,
+            borderColor: theme.palette.secondary.dark,
+          },
+          // Responsive styles
+          [theme.breakpoints.up('md')]: {
+            minWidth: '124px',
+          },
+          [theme.breakpoints.down('md')]: {
+            padding: '10px 16px',
           },
         }),
       },

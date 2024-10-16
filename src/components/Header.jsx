@@ -32,11 +32,14 @@ const HeaderInner = styled(Container)(({ theme }) => ({
 }));
 
 // Logo styles
-const LogoWrap = styled('a')({
+const LogoWrap = styled('a')(({ theme }) => ({
   display: 'inline-flex',
   height: '42px',
   position: 'relative',
-});
+  [theme.breakpoints.down('md')]: {
+    height: '38px',
+  },
+}));
 
 const Logo = styled('img')(({ isSticky }) => ({
   height: '100%',
@@ -59,7 +62,7 @@ const LangButton = styled(Button)(({ theme }) => ({
   width: '42px',
   height: '42px',
   minWidth: 'auto',
-  padding: '8px',
+  padding: '8px !important',
   borderRadius: '12px',
   backgroundColor: alpha(theme.palette.error.main, 0.1),  // Use palette color with alpha
   outline: 'none',

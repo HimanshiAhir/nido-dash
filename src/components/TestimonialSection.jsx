@@ -35,6 +35,7 @@ const TestimonialHeading = styled(Typography)(({ theme }) => ({
 
 // Testimonial Wrap for Slick Slider
 const TestimonialWrap = styled(Box)(({ theme }) => ({
+  width: '100%',
   maxWidth: '430px',
   margin: '0 auto',
   '& .slick-dots': {
