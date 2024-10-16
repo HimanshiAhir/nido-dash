@@ -32,14 +32,20 @@ const LogoWrap = styled(Box)(({ theme }) => ({
   maxWidth: '436px',
   color: '#FFFFFF',
   position: 'relative',
+  [theme.breakpoints.down('md')]: {
+    gap: '28px',
+  }
 }));
 
 // Logo Image
-const LogoImage = styled('img')({
+const LogoImage = styled('img')(({ theme }) => ({
   width: '112px',
   display: 'inline-flex',
   flexShrink: 0,
-});
+  [theme.breakpoints.down('md')]: {
+    width: '92px',
+  },
+}));
 
 // Slide Options List
 const SlideOptionsList = styled(List)(({ theme }) => ({
@@ -175,7 +181,7 @@ const Banner = () => {
           src={`${process.env.PUBLIC_URL}/assets/media/banner-icon.svg`}
           alt="Banner Icon"
         />
-        <Typography variant="h2" sx={{ fontSize: '46px', fontWeight: 600, lineHeight: 1 }}>
+        <Typography variant="h2" sx={{ fontSize: '46px', fontWeight: 600, lineHeight: 1, }}>
           Aerotermia Fácil
         </Typography>
       </LogoWrap>
