@@ -10,9 +10,6 @@ This is the frontend project for Nido, a company specializing in aerothermal ins
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
   - [Running the Project](#running-the-project)
-  - [Project Structure](#project-structure)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Project Overview
 

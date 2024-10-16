@@ -29,6 +29,9 @@ const HeaderInner = styled(Container)(({ theme }) => ({
   paddingRight: '20px',
   marginLeft: 'auto',
   marginRight: 'auto',
+  [theme.breakpoints.down('md')]: {
+    gap: '16px'
+  }
 }));
 
 // Logo styles
@@ -61,7 +64,7 @@ const StickyLogo = styled('img')(({ isSticky }) => ({
 const LangButton = styled(Button)(({ theme }) => ({
   width: '42px',
   height: '42px',
-  minWidth: 'auto',
+  minWidth: 'auto !important',
   padding: '8px !important',
   borderRadius: '12px',
   backgroundColor: alpha(theme.palette.error.main, 0.1),  // Use palette color with alpha
