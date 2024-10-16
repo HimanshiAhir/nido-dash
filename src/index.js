@@ -28,6 +28,26 @@ const nidotheme = createTheme({
     fontFamily: 'Barlow, sans-serif;',
   },
   components: {
+    MuiContainer: {
+      styleOverrides: {
+        maxWidthLg: {
+          maxWidth: '1240px',
+          paddingLeft: '20px',
+          paddingRight: '20px',
+          '@media (max-width: 600px)': {
+            paddingLeft: '15px',
+            paddingRight: '15px',
+          },
+          '@media (min-width: 600px)': {
+            paddingLeft: '20px',
+            paddingRight: '20px',
+          },
+          '@media (min-width: 1200px)': {
+            maxWidth: '1240px',
+          },
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: ({ theme }) => ({
